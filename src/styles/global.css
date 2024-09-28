@@ -1,0 +1,24 @@
+#fullpage{
+    background: navy;
+    color: aqua;
+    padding: 0 4% 0;
+}
+#logo{height: 45px;}
+#mainmenu{margin:auto}
+.social-top {margin:0 }
+.social-top li {
+    display:inline-block;
+    list-style-type:none;
+    margin-left:14px;   }
+.social-top li a {
+    font-size:24px;
+    color:#262823;
+}
+
+#content{
+    min-height: 80vh;
+}
+
+footer{
+    background-color: white;
+}
