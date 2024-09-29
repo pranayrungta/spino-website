@@ -1,9 +1,10 @@
 import React from 'react'
+import './../styles/footer.css'
 
 export default function Footer() {
   return (
   <footer>
-    {/* <div className="middle_footer">
+    <div className="middle_footer">
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-3">
@@ -90,24 +91,29 @@ export default function Footer() {
       </div>
     </div>
     <div className="bottom_footer">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-sm-8">
-            <p>Copyright © 2020 Spinaroo Commercial Pvt Ltd, All right reserved <span>|</span> Designed and Developed By
-              <a href="https://www.ivaninfotech.com/" target="_blank">Ivan Infotech</a></p>
-          </div>
-          <div className="col-sm-4">
-            <ul className="social-top">
-              <li><a href="https://www.instagram.com/spino_paper" target="_blank"><i className="fa fa-instagram"
-                    aria-hidden="true"></i></a></li>
-              <li><a href="https://www.facebook.com/spinopapers" target="_blank"><i className="fa fa-facebook"
-                    aria-hidden="true"></i></a></li>
-              <li><a href="https://www.youtube.com/" target="_blank"><i className="fa fa-youtube"
-                    aria-hidden="true"></i></a></li>
-            </ul>
-          </div>
-        </div>
+    <div className="container">
+    <div className="row align-items-center">
+      <div className="col-sm-8">
+        <p>Copyright © 2020 Spinaroo Commercial Pvt Ltd, All right reserved</p>
       </div>
-    </div> */}
+      <div className="col-sm-4">
+        <ul className="social-top">
+          <li><a href="https://www.instagram.com/spino_paper"
+                 rel="noopener noreferrer" target="_blank">
+              <i className="fa fa-instagram"
+                  aria-label="social"></i></a></li>
+          <li><a href="https://www.facebook.com/spinopapers"
+                 rel="noopener noreferrer" target="_blank">
+              <i className="fa fa-facebook"
+                  aria-label="social"></i></a></li>
+          <li><a href="https://www.youtube.com/"
+                 rel="noopener noreferrer" target="_blank">
+              <i className="fa fa-youtube"
+                  aria-label="social"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    </div>
   </footer>)
 }
