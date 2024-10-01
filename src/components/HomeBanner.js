@@ -1,5 +1,6 @@
 import React from 'react'
-import './../styles/homebanner.css'
+import './../styles/style.css'
+import './../styles/responsive.css'
 
 export default function HomeBanner() {
   return (

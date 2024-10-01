@@ -1,9 +1,13 @@
 #fullpage{
     background: navy;
     color: aqua;
-    padding: 0 4% 0;
 }
-#logo{height: 45px;}
+
+#logo {
+    height: 60px;
+    margin-left: 30px;
+}
+
 #mainmenu{margin:auto}
 .social-top {margin:0 }
 .social-top li {
