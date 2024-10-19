@@ -4,45 +4,19 @@
     background: #f8fbeb;
   }
 
-  .home_banner:before {
+  /* .home_banner:before {
     content: "";
     position: absolute;
     z-index: 9;
     width: 64px;
     height: 268px;
     left: 60px;
-    top: -26px;
+    top: -26px; # dots are here on banner
     background: url(/wp-content/themes/spinaroo/images/banner-after.png) no-repeat;
-  }
+  } */
 
   .home_banner .carousel-item img {
     width: 100%;
-  }
-
-  .home_banner .banner_text {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    text-align: left;
-    top: 29%;
-  }
-
-  .home_banner .banner_text h4 {
-    color: #fff;
-    margin: 0 0 19px 0;
-    font-size: 22px;
-    font-weight: 500;
-    letter-spacing: 1px;
-  }
-
-  .home_banner .banner_text h2 {
-    color: #fff;
-    text-transform: uppercase;
-    margin: 0;
-    font-size: 46px;
-    font-weight: 700;
-    letter-spacing: 2px;
   }
 
   .home_banner .banner_text .contactBtn {
@@ -95,29 +69,3 @@
 .home_banner {
     padding: 0 15px;
 }
-
-.home_banner .banner_text {
-    text-align: center;
-    top: 6%;
-}
-
-/* .home_banner .banner_text h2 {
-    font-size: 22px;
-}
-
-.home_about h2 {
-    margin-top: 0;
-}
-
-.home_banner {
-    background-color: #006684;
-    padding: 0;
-}
-
-.home_banner #homeslide img {
-    height: 250px;
-}
-
-.home_banner video {
-    height: auto;
-} */
