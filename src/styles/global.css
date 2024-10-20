@@ -1,6 +1,6 @@
 #fullpage{
-    background: navy;
-    color: aqua;
+    background: white;
+    color: black;
 }
 
 #logo {
@@ -25,4 +25,25 @@
 
 footer{
     background-color: white;
+}
+
+
+
+
+.home_about img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+.home_about h2 {
+    margin-top: 0;
+}
+
+.home_about{
+    padding: 26px 0;
+    margin-top: 16px;
+}
+
+.home_about:before{
+    display: none;
 }

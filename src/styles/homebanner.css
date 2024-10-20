@@ -4,17 +4,6 @@
     background: #f8fbeb;
   }
 
-  /* .home_banner:before {
-    content: "";
-    position: absolute;
-    z-index: 9;
-    width: 64px;
-    height: 268px;
-    left: 60px;
-    top: -26px; # dots are here on banner
-    background: url(/wp-content/themes/spinaroo/images/banner-after.png) no-repeat;
-  } */
-
   .home_banner .carousel-item img {
     width: 100%;
   }
