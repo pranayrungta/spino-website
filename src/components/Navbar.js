@@ -5,6 +5,22 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import { Link } from "gatsby";
 
 export default function Navbar() {
+  const links = [
+    {name: 'Home'     , to:'/'},
+    {name: 'About us' , to:'#'}, // not used 'to'
+    {name: 'Products' , to:'#'},
+    {name: 'Career'   , to:'#'},
+    {name: 'Gallery'  , to:'#'},
+    {name: 'Contact us' , to:'/contact/'} ]
+  const about = [{name:'Our Story', to:'#'},
+    {name:'Company Profile', to:'#'},
+    {name:'Quality Assurance', to:'#'},
+    {name:'Eco Green Environment', to:'#'} ]
+  let social = [];
+  // [ {stype:"fa fa-instagram", to:"https://www.instagram.com/spino_paper"},
+  //   {stype:"fa fa-facebook", to:"https://www.facebook.com/spinopapers"},
+  //   {stype:"fa fa-youtube", to:"https://www.youtube.com/" } ];
+
   return (<header>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
     <div className="container-fluid">
@@ -20,61 +36,40 @@ export default function Navbar() {
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0" id='mainmenu'>
           <li className="nav-item">
-          <Link className="nav-link active" to="/">
-            Home
-          </Link>
+            <Link className='nav-link active' to={links[0].to}>
+              {links[0].name}
+            </Link>
           </li>
           <li className="nav-item dropdown">
             <button className="nav-link dropdown-toggle"
-                data-bs-toggle="dropdown" aria-expanded="false">
-              About Us
+                 data-bs-toggle="dropdown" aria-expanded="false">
+              {links[1].name}
             </button>
             <ul className="dropdown-menu">
-              <li><Link className="dropdown-item" to="#">
-                  Our Story
-              </Link></li>
-              <li><Link className="dropdown-item" to="#">
-                  Company Profile
-              </Link></li>
-              <li><Link className="dropdown-item" to="#">
-                  Quality Assurance
-              </Link></li>
-              <li><Link className="dropdown-item" to="#">
-                  Eco Green Environment
-              </Link></li>
+              {about.map((d, index)=>{return (<li key={index}>
+                <Link className="dropdown-item" to={d.to}>
+                {d.name}
+                </Link>
+              </li>)})}
             </ul>
           </li>
-          <li className="nav-item">
-          <Link className="nav-link" to="#">
-            Link Products
-          </Link>
-          </li>
-          <li className="nav-item">
-          <Link className="nav-link" to="#">
-            Career
-          </Link>
-          </li>
-          <li className="nav-item">
-          <Link className="nav-link" to="#">
-            Gallery
-          </Link>
-          </li>
-          <li className="nav-item">
-          <Link className="nav-link" to="/contact">
-            Contact us
-          </Link>
-          </li>
+          {links.slice(2).map((d, index)=>{return (
+            <li className="nav-item" key={index}>
+            <Link className="nav-link" to={d.to}>
+              {d.name}
+            </Link>
+            </li>
+          )})}
         </ul>
+        {(social.length > 0)? (
         <div className="ml-auto row align-items-center">
           <ul className="social-top">
-            <li><a href="https://www.instagram.com/spino_paper" target="_blank" rel="noreferrer">
-              <i className="fa fa-instagram" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.facebook.com/spinopapers" target="_blank" rel="noreferrer">
-              <i className="fa fa-facebook" aria-hidden="true"></i></a></li>
-            <li><a href="https://www.youtube.com/" target="_blank" rel="noreferrer">
-              <i className="fa fa-youtube"  aria-hidden="true"></i></a></li>
+            {social.map((d,index)=> {return (<li key={index}>
+              <a href={d.to} target="_blank" rel="noreferrer">
+              <i className={d.stype} aria-hidden="true"></i></a>
+            </li>)})}
           </ul>
-        </div>
+        </div> ):(<div></div>)}
       </div>
     </div>
     </nav>
