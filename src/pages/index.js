@@ -11,7 +11,7 @@ function HomeBanner() {
     <div id="carouselExample" className="carousel slide home_banner">
       <div className="carousel-inner">
         <div className="carousel-item active">
-        <img src={"/home/" + files[0]}
+        <img src={"/banner/" + files[0]}
             className="d-block w-100" alt="..."/>
         </div>
         {files.slice(1).map((file, index)=>{ return (

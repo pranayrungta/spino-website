@@ -17,6 +17,19 @@ function get_data(slug){
   return alldata[slug]
 }
 
+function table(df){
+  return (<div class="table-responsive">
+  <table>
+  <tbody>
+    {df.map((row, idi)=>{return (<tr key={idi}>
+      <td><strong>{row[0]}</strong></td>
+      {row.slice(1).map((e, idj) =>
+        (<td key={idj}>{e}</td>))}
+    </tr>)})}
+  </tbody>
+  </table>
+</div>)
+}
 
 export default function Products({pageContext}) {
   const slug = pageContext.slug;
@@ -26,8 +39,7 @@ export default function Products({pageContext}) {
     <br/>
     {data['name']}
     <img src={data['imgsrc']} alt=""/>
-
-
+    {table(data['data'])}
   </Layout>)
 }
 

@@ -8,7 +8,7 @@ export default function Navbar() {
   const links = [
     {name: 'Home'     , to:'/'},
     {name: 'About us' , to:'#'}, // not used 'to'
-    {name: 'Products' , to:'#'},
+    {name: 'Products' , to:'/products/'},
     {name: 'Career'   , to:'#'},
     {name: 'Gallery'  , to:'#'},
     {name: 'Contact us' , to:'/contact/'} ]
