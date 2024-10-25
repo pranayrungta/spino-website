@@ -53,21 +53,16 @@ function banner(name) {
         <ul id="breadcrumbs" className="breadcrumbs">
           <li className="item-home">
           <a className="bread-link bread-home" href="/" title="Home">
-            Home
-          </a>
-          </li>
+            Home </a> </li>
           <li className="separator separator-home">/</li>
           <li className="item-home">
           <a className="bread-link bread-home" href="/products/"
             title="Products">
-            Products
-          </a>
-          </li>
+            Products </a> </li>
           <li className="separator separator-home">/</li>
           <li className="item-current item-15">
             <strong className="bread-current">
-              {name}
-            </strong>
+              {name} </strong>
           </li>
         </ul>
       </div>
@@ -106,7 +101,7 @@ function featured(fp){
     </div>
     </div>
   </div>
-</div>)
+  </div>)
 }
 
 export default function Products({pageContext}) {
@@ -134,9 +129,7 @@ export default function Products({pageContext}) {
     </div>
     </div>
     </div>
-
     {featured(ad.fp)}
-
   </Layout>)
 }
 
