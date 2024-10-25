@@ -17,9 +17,8 @@ function Banner() {
       <div className="breadcrumb_top">
           <ul id="breadcrumbs" className="breadcrumbs">
           <li className="item-home">
-              <a className="bread-link bread-home" href="/" title="Home"
-              >Home</a
-              >
+              <a className="bread-link bread-home" href="/" title="Home">
+              Home  </a>
           </li>
           <li className="separator separator-home">/</li>
           <li className="item-current item-11">
