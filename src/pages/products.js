@@ -74,11 +74,11 @@ export default function NotFound() {
     {slug: "/products/aluminium-home-foil"     , imgsrc : "/products/Home-Foil.png"     , name : "Aluminium Home Foil"      },
   ],
   machines : [
-    {slug: "/machinery/coating-machine/"             , imgsrc : "/machines/m-5.jpg"  , name : "Coating machine"             },
-    {slug: "/machinery/slitting-machine/"            , imgsrc : "/machines/m-4.jpg"  , name : "Slitting machine"            },
-    {slug: "/machinery/flexo-paper-printing-machine/", imgsrc : "/machines/m-3.jpg"  , name : "Flexo Paper Printing Machine"},
-    {slug: "/machinery/die-cutting-machine/"         , imgsrc : "/machines/m-2.png"  , name : "Die cutting Machine"         },
-    {slug: "/machinery/paper-cup-machine/"           , imgsrc : "/machines/m-1.png"  , name : "Paper Cup Machine"           },
+    {slug: "/machines/coating-machine/"             , imgsrc : "/machines/m-5.jpg"  , name : "Coating machine"             },
+    {slug: "/machines/slitting-machine/"            , imgsrc : "/machines/m-4.jpg"  , name : "Slitting machine"            },
+    {slug: "/machines/flexo-paper-printing-machine/", imgsrc : "/machines/m-3.jpg"  , name : "Flexo Paper Printing Machine"},
+    {slug: "/machines/die-cutting-machine/"         , imgsrc : "/machines/m-2.png"  , name : "Die cutting Machine"         },
+    {slug: "/machines/paper-cup-machine/"           , imgsrc : "/machines/m-1.png"  , name : "Paper Cup Machine"           },
   ]};
   return (<Layout>
     <Banner/>
