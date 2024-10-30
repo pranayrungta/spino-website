@@ -1,4 +1,6 @@
-import { fullpage } from "./products";
+import React from "react"
+import Layout from "../components/Layout"
+import { table, get_data, breadcrum, featured } from "./prod-data";
 
 function machines_data(){
   return {
@@ -10,7 +12,38 @@ function machines_data(){
   }
 }
 
+function machpage(slug){
+  const alldata = get_data(machines_data(), slug)
+  const curprod = alldata.prod;
+
+  return (<Layout>
+    <div>
+      <div className="innerBanner">
+        <img src="/banner/pexels-photo-1108572.jpg"
+          alt="" className="img-responsive"/>
+      </div>
+      {breadcrum(curprod.name)}
+    </div>
+
+    <div className="innerbody product_details">
+    <div className="container">
+    <div className="row">
+      <div className="col-sm-4">
+        <div className="service_img">
+        <img src={curprod.imgsrc} alt={curprod.name}
+          className="img-responsive img-thumbnail" />
+        </div>
+      </div>
+      {/* {product_details(slug)} */}
+    </div>
+    </div>
+    </div>
+    {featured(alldata.fp)}
+  </Layout>)
+}
+
+
 export default function Machines({pageContext}) {
-  return fullpage(pageContext.slug, machines_data())
+  return machpage(pageContext.slug)
 }
 

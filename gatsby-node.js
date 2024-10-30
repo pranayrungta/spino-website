@@ -12,20 +12,17 @@ exports.createPages = async({graphql, actions}) => {
             context : {slug: slug}
         })
     })
-}
 
-
-exports.createPages = async({graphql, actions}) => {
-
-    const slugs = ["coating-machine", "slitting-machine",
+    const mslugs = ["coating-machine", "slitting-machine",
         "flexo-paper-printing-machine", "die-cutting-machine",
         "paper-cup-machine"];
-    slugs.map((slug)=>{
+    mslugs.map((slug)=>{
         actions.createPage({
             path: "/machines/"+slug,
             component: path.resolve('./src/templates/machines.js'),
             context : {slug: slug}
         })
     })
-}
 
+
+}
