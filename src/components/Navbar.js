@@ -7,14 +7,14 @@ import { Link } from "gatsby";
 export default function Navbar() {
   const links = [
     {name: 'Home'     , to:'/'},
-    {name: 'About us' , to:'#'}, // not used 'to'
+    {name: 'About us' , to:'#'}, // dropdown
     {name: 'Products' , to:'/products/'},
     {name: 'Gallery'  , to:'/gallery/'},
-    {name: 'Contact us' ,        to:'/contact/'},
-    {name: 'Investor Relations', to:'#'}, ]
+    {name: 'Contact us' ,           to:'/contact/'},
+    {name: 'Investor Relations',    to:'#'}, ]
   const about = [{name:'Our Story', to:'/about-us/'},
-    {name:'Quality Assurance', to:'#'},
-    {name:'Eco Green Environment', to:'#'} ]
+    {name:'Quality Assurance',      to:'/quality-assurance/'},
+    {name:'Eco Green Environment',  to:'/eco-green-environment/'} ]
   let social = [];
   // [ {stype:"fa fa-instagram", to:"https://www.instagram.com/spino_paper"},
   //   {stype:"fa fa-facebook", to:"https://www.facebook.com/spinopapers"},
