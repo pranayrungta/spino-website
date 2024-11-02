@@ -46,7 +46,7 @@ export default function Contact() {
             efficiently and effectively.
           </p>
           <h4>Unit I</h4>
-            <p style={{"text-align": "left"}}>
+            <p style={{"textAlign": "left"}}>
               Jalan Industrial Complex  <br/>
               Gate-1, Right Lane-6,  <br/>
               P.O.Jangalpur, Begri GramPanchayat,  <br/>
@@ -54,7 +54,7 @@ export default function Contact() {
             </p>
             <br/>
             <h4>Unit II</h4>
-            <p style={{"text-align": "left"}}>
+            <p style={{"textAlign": "left"}}>
               Jalan Industrial Complex  <br/>
               Gate-1, Right Lane- 3,  <br/>
               P.O.Jangalpur, Begri Gram Panchayat,  <br/>
@@ -75,8 +75,8 @@ export default function Contact() {
           <h3>We are here</h3>
           <div className="contactMap">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14733.415637865288!2d88.20864386987897!3d22.60325562225662!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027f6899505e87%3A0x436195ccfde2566!2sJalan%20Industrial%20Complex!5e0!3m2!1sen!2sin!4v1583333013583!5m2!1sen!2sin"
-              width="600" height="450" frameborder="0" title='we_are_here'
-              style={{"border": "0"}} allowfullscreen=""> </iframe>
+              width="600" height="450" title='we_are_here'
+              style={{"border": "0"}} allowFullScreen=""> </iframe>
           </div>
         </div>
       </div></div></div></div>

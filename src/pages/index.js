@@ -40,6 +40,6 @@ export default function Home() {
     <HomeBanner/>
     <Story/>
     <ProductCarousel/>
-    <div class="newsletter_area"> </div>
+    <div className="newsletter_area"> </div>
   </Layout>)
 }

@@ -24,7 +24,7 @@ function coating_machine(){
     ['Applicable Coating Material', 'PE'],
     ['Max Width of Coating',        '1200 mm'],
     ['Max Working Speed',           '150 m/min']]
-  return (<div class="col-sm-6">
+  return (<div className="col-sm-6">
     <h2>Coating machine</h2>
     {table(df)}
     <hr/>
@@ -32,7 +32,7 @@ function coating_machine(){
 }
 
 function slitting(){
-  return (<div class="col-sm-6">
+  return (<div className="col-sm-6">
   <h2>Slitting machine</h2>
   <p>
     This machine has the cutting width of 30-1250mm, which includes
@@ -111,7 +111,7 @@ function flexo(){
     ['Colour Printing',        'Colour Printing'],
     ['Weight',                 '7 Ton'],
     ['Printing Speed',         '110-120/Meter/Min']]
-  return (<div class="col-sm-6">
+  return (<div className="col-sm-6">
   <h2>Flexo Paper Printing Machine</h2>
   {table(df)}
   <p>
@@ -159,7 +159,7 @@ function flexo(){
 }
 
 function die_cutting(){
-  return (<div class="col-sm-6">
+  return (<div className="col-sm-6">
     <h2>Die cutting Machine</h2>
     <p>
       The offered machine delivers working speed of 100-130 punches per
@@ -232,7 +232,7 @@ function paper_cup(){
     ['Warranty',            '1 Year'       ],
     ['Weight 2100Kgs',      '2500 KG'      ],
     ['Voltage',             '210- 280 V'   ]]
-  return (<div class="col-sm-6">
+  return (<div className="col-sm-6">
   <h2>Paper Cup Machine</h2>
   <p>
     We offer best quality Fully Automatic High- Speed Paper Cup Making

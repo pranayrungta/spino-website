@@ -130,7 +130,7 @@ function tab_only(slug){
               ['Box Packing (Pcs)', '500', '500', '500', '500']]
   }
   const pd = products_data();
-  return (<div class="col-sm-8">
+  return (<div className="col-sm-8">
     <h2>{pd[slug].name}</h2>
     <h6>Size Available :</h6>
     {table(d[slug])}
@@ -141,7 +141,7 @@ function tab_only(slug){
 function paper_cup_banks(name){
   let tab = table([['Size', 'As per Requirement'],
                    ['Bag Packing', '25 Kg']]);
-  return (<div class="col-sm-8">
+  return (<div className="col-sm-8">
     <h2>{name}</h2>
     <p>PLAIN, SINGLE COLOUR, TWO COLOUR, MULTI COLOUR</p>
     <h6>Size Available :</h6>
@@ -151,7 +151,7 @@ function paper_cup_banks(name){
 }
 
 function coated_paper(name){
-  return (<div class="col-sm-8">
+  return (<div className="col-sm-8">
     <h2>{name}</h2>
     <h6>Size Available :</h6>
     <hr />
