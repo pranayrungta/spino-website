@@ -12,7 +12,7 @@ export default function Navbar() {
     {name: 'Career'   , to:'#'},
     {name: 'Gallery'  , to:'#'},
     {name: 'Contact us' , to:'/contact/'} ]
-  const about = [{name:'Our Story', to:'#'},
+  const about = [{name:'Our Story', to:'/about-us/'},
     {name:'Company Profile', to:'#'},
     {name:'Quality Assurance', to:'#'},
     {name:'Eco Green Environment', to:'#'} ]
