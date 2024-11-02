@@ -9,11 +9,10 @@ export default function Navbar() {
     {name: 'Home'     , to:'/'},
     {name: 'About us' , to:'#'}, // not used 'to'
     {name: 'Products' , to:'/products/'},
-    {name: 'Career'   , to:'#'},
-    {name: 'Gallery'  , to:'#'},
-    {name: 'Contact us' , to:'/contact/'} ]
+    {name: 'Gallery'  , to:'/gallery/'},
+    {name: 'Contact us' ,        to:'/contact/'},
+    {name: 'Investor Relations', to:'#'}, ]
   const about = [{name:'Our Story', to:'/about-us/'},
-    {name:'Company Profile', to:'#'},
     {name:'Quality Assurance', to:'#'},
     {name:'Eco Green Environment', to:'#'} ]
   let social = [];
