@@ -6,7 +6,7 @@ export default function Story() {
     <div className="container">
       <div className="row align-items-center">
         <div className="col-sm-6" data-aos="fade-right" data-aos-duration="3000">
-          <img src="/story/about-1.jpg" alt="" />
+          <img src="/banner/about-1.jpg" alt="" />
         </div>
         <div className="col-sm-6" data-aos="fade-left" data-aos-duration="3000">
           <h2>About Us</h2>
