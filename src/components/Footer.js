@@ -2,8 +2,7 @@ import React from 'react'
 import './../styles/footer.css'
 
 export default function Footer() {
-  return (
-  <footer>
+  return (<footer>
     <div className="middle_footer">
       <div className="container-fluid">
         <div className="row">
@@ -19,7 +18,7 @@ export default function Footer() {
           </div>
           <div className="col-lg-9">
             <div className="row">
-              <div className="col-sm-6 col-lg-3 cuswidth">
+              <div className="col-sm-4 cuswidth">
                 <h2>Quick Links</h2>
                 <div className="menu-useful-link-container">
                   <ul id="menu-useful-link" className="foot-link">
@@ -30,59 +29,48 @@ export default function Footer() {
                     <li id="menu-item-142"
                       className="menu-item menu-item-type-post_type menu-item-object-page menu-item-142"><a
                         href="/quality-assurance/">Quality Assurance</a></li>
-                    <li id="menu-item-143"
-                      className="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a
-                        href="/company-profile/">Company Profile</a></li>
                   </ul>
                 </div>
               </div>
-              <div className="col-sm-6 col-lg-3 cuswidth">
-                <h2>Products</h2>
-                <ul className="foot-link">
-                  <li><a href="/products/coated-paper/">Coated Paper</a></li>
-                  <li><a href="/products/laminated-lid/">Laminated LID</a></li>
-                  <li><a href="/products/paper-tissu/">Paper Tissue</a></li>
-                  <li><a href="/products/paper-cup-blanks/">Paper Cup Blanks</a></li>
-                </ul>
-              </div>
-              <div className="col-sm-6 col-lg-3 cuswidth">
+              <div className="col-sm-4 cuswidth">
                 <h2>Company Info</h2>
                 <div className="menu-company-menu-container">
                   <ul id="menu-company-menu" className="foot-link">
                     <li id="menu-item-53" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-53">
                       <a href="/about-us/">About Us</a></li>
-                    <li id="menu-item-45" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-45">
-                      <a href="/career/">Career</a></li>
                     <li id="menu-item-190"
                       className="menu-item menu-item-type-post_type menu-item-object-page menu-item-190"><a
                         href="/gallery/">Gallery</a></li>
                     <li id="menu-item-77" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-77">
                       <a href="/contact-us/">Contact us</a></li>
-                    <li id="menu-item-235"
-                      className="menu-item menu-item-type-custom menu-item-object-custom menu-item-235"><a
-                        href="https://accounts.zoho.com/signin">Login</a></li>
+                    <li id="menu-item-45" className="menu-item menu-item-type-post_type menu-item-object-page menu-item-45">
+                      <a href="/investor-relations/">Investor Relations</a></li>
                   </ul>
                 </div>
               </div>
-              <div className="col-sm-6 col-lg-3 cuswidth">
+              <div className="col-sm-4 cuswidth">
                 <h2>Contact Us</h2>
                 <ul className="footer_contact">
                   <li>
-                    <span><i className="fa fa-map-marker" aria-hidden="true"></i></span> Spinaroo Commercial Pvt. Ltd.<br/>
-                    Jalan Industrial Complex,<br/>
-                    Main Gate - 1,<br/>
-                    Right Lane – 3,<br/>
-                    P.O- Begri, P.S. Domjur,<br/>
-                    Howrah – 711411
-                  </li>
-                  <li>
-                    <span><i className="fa fa-phone" aria-hidden="true"></i></span> <a href="tel:(+91)9831037996">(+91)
-                      9831037996</a>
-                  </li>
-                  <li>
-                    <span><i className="fa fa-envelope-o" aria-hidden="true"></i></span> <a
-                      href="mailto:info@spino.local">info@spino.local</a>
-                  </li>
+                      <span><i className="fa fa-map-marker" aria-hidden="true"></i></span>
+                      Spinaroo Commercial Ltd.<br />
+                      Jalan Industrial Complex,<br />
+                      Main Gate - 1,<br />
+                      Right Lane - 3,<br />
+                      P.O- Begri, P.S. Domjur,<br />
+                      Howrah - 711411
+                    </li>
+                    <li>
+                      <span><i className="fa fa-phone" aria-hidden="true"></i></span>
+                      <a href="tel:(+91)7890975602">(+91) 7890975602</a> <br/>
+                      <a href="tel:(+91)9674703249">(+91) 9674703249</a>
+                    </li>
+                    <li>
+                      <span
+                        ><i className="fa fa-envelope-o" aria-hidden="true"></i
+                      ></span>
+                      <a href="mailto:enquiry@spino.co.in">enquiry@spino.co.in</a>
+                    </li>
                 </ul>
               </div>
             </div>
@@ -93,24 +81,11 @@ export default function Footer() {
     <div className="bottom_footer">
     <div className="container">
     <div className="row align-items-center">
-      <div className="col-sm-8">
-        <p>Copyright © 2020 Spinaroo Commercial Pvt Ltd, All right reserved</p>
-      </div>
-      <div className="col-sm-4">
-        <ul className="social-top">
-          <li><a href="https://www.instagram.com/spino_paper"
-                 rel="noopener noreferrer" target="_blank">
-              <i className="fa fa-instagram"
-                  aria-label="social"></i></a></li>
-          <li><a href="https://www.facebook.com/spinopapers"
-                 rel="noopener noreferrer" target="_blank">
-              <i className="fa fa-facebook"
-                  aria-label="social"></i></a></li>
-          <li><a href="https://www.youtube.com/"
-                 rel="noopener noreferrer" target="_blank">
-              <i className="fa fa-youtube"
-                  aria-label="social"></i></a></li>
-        </ul>
+      <div className="col-sm-12">
+        <p>
+          Copyright © 2020 Spinaroo Commercial Ltd <span>|</span>
+          All rights reserved
+        </p>
       </div>
     </div>
     </div>
