@@ -261,7 +261,7 @@ export default function Machines({pageContext}) {
   const curprod = alldata.prod;
 
   return (<Layout>
-    <Banner page='product-detail' name={curprod.name}/>
+    <Banner page='oneProd' name={curprod.name}/>
     <div className="innerbody product_details">
     <div className="container">
     <div className="row">
