@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
+import Banner from "../components/Banner"
 
 export function table(df){
   return (<div className="table-responsive">
@@ -22,37 +23,6 @@ export function get_data(fp, slug){
   fp = Object.entries(fp).map(
     ([slug, value]) => ({slug, ...value }));
   return {prod: prod, fp:fp};
-}
-
-export function breadcrum(name) {
-  return (<div className="breadcrumb_area">
-    <div className="container">
-    <div className="row align-items-center">
-      <div className="col-sm-6">
-      <div className="breadcrumb_top">
-        <ul id="breadcrumbs" className="breadcrumbs">
-          <li className="item-home">
-          <a className="bread-link bread-home" href="/" title="Home">
-            Home </a> </li>
-          <li className="separator separator-home">/</li>
-          <li className="item-home">
-          <a className="bread-link bread-home" href="/products/"
-            title="Products">
-            Products </a> </li>
-          <li className="separator separator-home">/</li>
-          <li className="item-current item-15">
-            <strong className="bread-current">
-              {name} </strong>
-          </li>
-        </ul>
-      </div>
-      </div>
-      <div className="col-sm-6">
-        <div className="breadcrumb_top"><h1>{name}</h1></div>
-      </div>
-    </div>
-    </div>
-  </div>)
 }
 
 export function featured(fp, machines=false){
@@ -175,14 +145,7 @@ export function prodpage(slug){
   const curprod = alldata.prod;
 
   return (<Layout>
-    <div>
-      <div className="innerBanner">
-        <img src="/banner/pexels-photo-1108572.jpg"
-          alt="" className="img-responsive"/>
-      </div>
-      {breadcrum(curprod.name)}
-    </div>
-
+    <Banner page='product-detail' name={curprod.name}/>
     <div className="innerbody product_details">
     <div className="container">
     <div className="row">

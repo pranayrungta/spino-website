@@ -1,41 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout'
-
-function Banner() {
-  return (<div>
-    <div className="innerBanner">
-      <img src="/banner/pexels-photo-247599.jpg"
-           alt="about-us" className="img-responsive" />
-    </div>
-    <div className="breadcrumb_area">
-    <div className="container">
-    <div className="row align-items-center">
-      <div className="col-sm-6">
-        <div className="breadcrumb_top">
-        <ul id="breadcrumbs" className="breadcrumbs">
-          <li className="item-home">
-            <a className="bread-link bread-home" href="/"
-               title="Home"> Home </a>
-          </li>
-          <li className="separator separator-home">/</li>
-          <li className="item-current item-9">
-            <strong className="bread-current bread-9"> About Us</strong>
-          </li>
-        </ul>
-        </div>
-      </div>
-      <div className="col-sm-6">
-        <div className="breadcrumb_top">
-          <h1>About Us</h1>
-        </div>
-      </div>
-    </div> </div> </div>
-  </div>)
-}
+import Banner from '../components/Banner'
 
 export default function About_us() {
   return (<Layout>
-    <Banner/>
+    <Banner page='about'/>
     <div className="home_about inner-about">
       <div className="container">
         <div className="row align-items-center">

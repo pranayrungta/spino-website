@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { table, get_data, breadcrum, featured } from "./prod-data";
+import { table, get_data, featured } from "./prod-data";
+import Banner from "../components/Banner";
 
 function machines_data(){
   return {
@@ -16,7 +17,6 @@ function machines_data(){
                                       name : "Paper Cup Machine"           },
   }
 }
-
 
 function coating_machine(){
   const df = [['Capacity', '120 metre per min(Production)'],
@@ -243,7 +243,6 @@ function paper_cup(){
   </div>)
 }
 
-
 function machine_details(slug){
   const maps = {
     'coating-machine' : coating_machine,
@@ -262,14 +261,7 @@ export default function Machines({pageContext}) {
   const curprod = alldata.prod;
 
   return (<Layout>
-    <div>
-      <div className="innerBanner">
-        <img src="/banner/pexels-photo-1108572.jpg"
-          alt="" className="img-responsive"/>
-      </div>
-      {breadcrum(curprod.name)}
-    </div>
-
+    <Banner page='product-detail' name={curprod.name}/>
     <div className="innerbody product_details">
     <div className="container">
     <div className="row">

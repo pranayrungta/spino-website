@@ -1,41 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout'
-
-function Banner(){
-  return (<div>
-    <div className="innerBanner">
-      <img src="/banner/pexels-photo-392018.jpg"
-           alt="quality-assurance" className="img-responsive" />
-    </div>
-    <div className="breadcrumb_area">
-      <div className="container">
-      <div className="row align-items-center">
-        <div className="col-sm-6">
-        <div className="breadcrumb_top">
-        <ul id="breadcrumbs" className="breadcrumbs">
-          <li className="item-home">
-            <a className="bread-link bread-home"
-               href="/" title="Home">Home</a>
-          </li>
-          <li className="separator separator-home">/</li>
-          <li className="item-current item-19">
-            <strong className="bread-current bread-19">
-            Investor Relations </strong>
-          </li>
-        </ul> </div> </div>
-        <div className="col-sm-6">
-          <div className="breadcrumb_top">
-          <h1>Investor Relations</h1>
-          </div>
-        </div>
-      </div> </div>
-    </div>
-  </div>)
-}
+import Banner from '../components/Banner'
 
 export default function EcoGreenEnv() {
   return (<Layout>
-    <Banner/>
+    <Banner page='invest'/>
     <div className="innerbody">
     <div className="container">
           <div className="contact-form">

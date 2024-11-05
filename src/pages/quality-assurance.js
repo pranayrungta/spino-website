@@ -1,41 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout'
-
-function Banner(){
-  return (<div>
-    <div className="innerBanner">
-      <img src="/banner/why-hire-professional-auditor.png"
-           alt="quality-assurance" className="img-responsive" />
-    </div>
-    <div className="breadcrumb_area">
-      <div className="container">
-      <div className="row align-items-center">
-        <div className="col-sm-6">
-        <div className="breadcrumb_top">
-        <ul id="breadcrumbs" className="breadcrumbs">
-          <li className="item-home">
-            <a className="bread-link bread-home"
-               href="/" title="Home">Home</a>
-          </li>
-          <li className="separator separator-home">/</li>
-          <li className="item-current item-118">
-            <strong className="bread-current bread-118">
-              Quality Assurance</strong>
-          </li>
-        </ul> </div> </div>
-        <div className="col-sm-6">
-          <div className="breadcrumb_top">
-          <h1>Quality Assurance</h1>
-          </div>
-        </div>
-      </div> </div>
-    </div>
-  </div>)
-}
+import Banner from '../components/Banner'
 
 export default function QualityAssurance() {
   return (<Layout>
-    <Banner/>
+    <Banner page='qa'/>
     <div className="home_about inner-about">
       <div className="container">
       <div className="row align-items-center">

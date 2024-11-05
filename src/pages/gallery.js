@@ -1,39 +1,6 @@
 import React from 'react'
 import Layout from "../components/Layout"
-
-function Banner(){
-  return (<div>
-  <div className="innerBanner">
-  <img src="/banner/pexels-photo-145685.jpg" alt="gallery"
-       className="img-responsive" />
-</div>
-<div className="breadcrumb_area">
-  <div className="container">
-    <div className="row align-items-center">
-      <div className="col-sm-6">
-        <div className="breadcrumb_top">
-          <ul id="breadcrumbs" className="breadcrumbs">
-            <li className="item-home">
-              <a className="bread-link bread-home" href="/" title="Home"
-                >Home</a
-              >
-            </li>
-            <li className="separator separator-home">/</li>
-            <li className="item-current item-17">
-              <strong className="bread-current bread-17"> Gallery</strong>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="col-sm-6">
-        <div className="breadcrumb_top">
-          <h1>Gallery</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-</div></div>)
-}
+import Banner from '../components/Banner'
 
 export default function Gallery() {
   const files = ['0U5A2695.JPG', '0U5A2747.JPG', '0U5A2794.JPG',
@@ -45,7 +12,7 @@ export default function Gallery() {
     '0U5A2716.JPG', '0U5A2771.JPG', 'IMG-20240910-WA0017.jpg',
     'printed-reel.jpg', '0U5A2722.JPG', '0U5A2780.JPG']
   return (<Layout>
-    <Banner/>
+    <Banner page='gallery'/>
     <div className="innerbody">
       <div className="container">
         <div className="white_bg">

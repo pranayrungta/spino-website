@@ -1,40 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout'
-
-function Banner(){
-  return (<div><div className="innerBanner">
-    <img src="/banner/hands-coffee-smartphone-technology.jpg"
-        alt="about-us" className="img-responsive" />
-    </div>
-    <div className="breadcrumb_area">
-    <div className="container">
-    <div className="row align-items-center">
-      <div className="col-sm-6">
-        <div className="breadcrumb_top">
-          <ul id="breadcrumbs" className="breadcrumbs">
-            <li className="item-home">
-              <a className="bread-link bread-home"
-                 href="/" title="Home"> Home </a>
-            </li>
-            <li className="separator separator-home">/</li>
-            <li className="item-current item-61">
-              <strong className="bread-current bread-61"> Contact us</strong>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div className="col-sm-6">
-        <div className="breadcrumb_top">
-          <h1>Contact us</h1>
-        </div>
-      </div>
-    </div></div></div>
-  </div>)
-}
+import Banner from '../components/Banner'
 
 export default function Contact() {
   return (<Layout>
-    <Banner/>
+    <Banner page='contact'/>
     <div className="innerbody">
       <div className="contact-us">
       <div className="container">

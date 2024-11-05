@@ -3,41 +3,7 @@ import Layout from "../components/Layout"
 import "bootstrap/dist/js/bootstrap.min.js";
 import "jquery/dist/jquery.slim.min.js"
 import "bootstrap/dist/css/bootstrap.min.css";
-
-function Banner() {
-  return (<div>
-    <div className="innerBanner">
-      <img src="/banner/pexels-photo-1108572.jpg"
-        alt="" className="img-responsive"/>
-    </div>
-    <div className="breadcrumb_area">
-    <div className="container">
-    <div className="row align-items-center">
-      <div className="col-sm-6">
-      <div className="breadcrumb_top">
-          <ul id="breadcrumbs" className="breadcrumbs">
-          <li className="item-home">
-              <a className="bread-link bread-home" href="/" title="Home">
-              Home  </a>
-          </li>
-          <li className="separator separator-home">/</li>
-          <li className="item-current item-11">
-              <strong className="bread-current bread-11"> Products</strong>
-          </li>
-          </ul>
-      </div>
-      </div>
-      <div className="col-sm-6">
-      <div className="breadcrumb_top">
-          <h1>Products</h1>
-      </div>
-      </div>
-    </div>
-    </div>
-    </div>
-  </div>)
-}
-
+import Banner from '../components/Banner';
 
 function dataRow(data){
   return (<div className="row">
@@ -81,7 +47,7 @@ export default function NotFound() {
     {slug: "/machines/paper-cup-machine/"           , imgsrc : "/machines/m-1.png"  , name : "Paper Cup Machine"           },
   ]};
   return (<Layout>
-    <Banner/>
+    <Banner page='product'/>
     <div className="innerbody featured_products">
     <div className="container">
     <div className="white_bg">
