@@ -33,7 +33,7 @@ function Banner(){
   </div>)
 }
 
-export default function QualityAssurance() {
+export default function EcoGreenEnv() {
   return (<Layout>
     <Banner/>
     <div className="home_about inner-about inner-eco">

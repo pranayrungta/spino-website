@@ -11,7 +11,7 @@ export default function Navbar() {
     {name: 'Products' , to:'/products/'},
     {name: 'Gallery'  , to:'/gallery/'},
     {name: 'Contact us' ,           to:'/contact/'},
-    {name: 'Investor Relations',    to:'#'}, ]
+    {name: 'Investor Relations',    to:'/investor-relations/'}, ]
   const about = [{name:'Our Story', to:'/about-us/'},
     {name:'Quality Assurance',      to:'/quality-assurance/'},
     {name:'Eco Green Environment',  to:'/eco-green-environment/'} ]
