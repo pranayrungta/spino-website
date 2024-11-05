@@ -8,15 +8,6 @@ function breadcrumb(title, link, n=0){
   <li key={n+1}>/</li>]
 }
 
-function line_items(lastItem, isProduct){
-  let litems = breadcrumb('Home', '/', 0);
-  if (isProduct)
-    litems.push( ...breadcrumb('Products', '/products/', 2));
-  litems.push(<li key={4}><strong>{lastItem}</strong></li>);
-  return litems
-}
-
-
 export default function Banner({page, name=null}) {
   const ad = {
     oneProd : {img:'pexels-photo-1108572.jpg', text: null },
@@ -30,9 +21,13 @@ export default function Banner({page, name=null}) {
   };
 
   let data = ad[page];
-  const isOneProd = (page==='oneProd');
-  if (isOneProd){ data.text = name; }
-  const items = line_items(data.text, isOneProd)
+  if (page==='oneProd'){
+    data.text = name;}
+
+  let items = breadcrumb('Home', '/', 0);
+  if (page==='oneProd')
+    items.push( ...breadcrumb('Products', '/products/', 2));
+  items.push(<li key={4}><strong>{data.text}</strong></li>);
 
   return (<div>
     <div className="innerBanner">
