@@ -2,9 +2,7 @@ import React from 'react'
 
 function breadcrumb(title, link, n=0){
   return [
-  <li key={n}>
-    <a href={link} title={title}> {title} </a>
-  </li>,
+  <li key={n}><a href={link} title={title}> {title} </a></li>,
   <li key={n+1}>/</li>]
 }
 
@@ -19,15 +17,14 @@ export default function Banner({page, name=null}) {
     qa      : {img:'why-hire-professional-auditor.png', text: 'Quality Assurance'},
     contact : {img:'hands-coffee-smartphone-technology.jpg', text: 'Contact us'},
   };
-
   let data = ad[page];
   if (page==='oneProd'){
     data.text = name;}
 
-  let items = breadcrumb('Home', '/', 0);
+  let brcItems = breadcrumb('Home', '/', 0);
   if (page==='oneProd')
-    items.push( ...breadcrumb('Products', '/products/', 2));
-  items.push(<li key={4}><strong>{data.text}</strong></li>);
+    brcItems.push( ...breadcrumb('Products', '/products/', 2));
+  brcItems.push(<li key={4}><strong>{data.text}</strong></li>);
 
   return (<div>
     <div className="innerBanner">
@@ -40,9 +37,8 @@ export default function Banner({page, name=null}) {
       <div className="col-sm-6">
         <div className="breadcrumb_top">
         <ul id="breadcrumbs" className="breadcrumbs">
-          {items}
-        </ul>
-        </div>
+          {brcItems}
+        </ul></div>
       </div>
       <div className="col-sm-6">
         <div className="breadcrumb_top">

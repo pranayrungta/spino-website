@@ -16,7 +16,7 @@ function HomeBanner() {
         </div>
         {files.slice(1).map((file, index)=>{ return (
           <div className="carousel-item" key={index}>
-          <img src={"/home/" + file}
+          <img src={"/banner/" + file}
               className="d-block w-100" alt="..."/>
           </div>
         )})}

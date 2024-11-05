@@ -13,8 +13,7 @@ export default function ProductCarousel() {
     {link:"/products/paper-cups/",       text:"Paper Cups"        , imgsrc: "/products/1.png"               },
     {link:"/products/test/",             text:"Paper Plate Blanks", imgsrc: "/products/9.png"               },
   ];
-  return (
-    <div className="featured_products">
+  return (<div className="featured_products">
     <div className="container">
       <h2><span>Our</span> Products</h2>
       <div className="pro-row">
@@ -30,11 +29,8 @@ export default function ProductCarousel() {
             <div className="pro-sec">
               <h3><a href={p.link}>{p.text}</a></h3>
             </div>
-          </div>
-          </div>
+          </div></div>
         )})}
-      </div>
-      </div>
-    </div>
-    </div>)
+      </div> </div>
+    </div></div>)
 }

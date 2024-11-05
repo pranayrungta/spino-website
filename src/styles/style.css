@@ -150,8 +150,8 @@ header .social-top li a {
   width: 64px;
   height: 268px;
   left: 60px;
+  background: url(/banner/banner-after.png) no-repeat;
   top: -26px;
-  background: url(/home/banner-after.png) no-repeat;
 }
 
 .home_banner .carousel-item img {
