@@ -3,23 +3,13 @@ import "jquery/dist/jquery.slim.min.js"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { Link } from "gatsby";
+import { navlinks } from "./data";
 
 export default function Navbar() {
-  const links = [
-    {name: 'Home'     , to:'/'},
-    {name: 'About us' , to:'#'}, // dropdown
-    {name: 'Products' , to:'/products/'},
-    {name: 'Gallery'  , to:'/gallery/'},
-    {name: 'Contact us' ,           to:'/contact/'},
-    {name: 'Investor Relations',    to:'/investor-relations/'}, ]
-  const about = [{name:'Our Story', to:'/about-us/'},
-    {name:'Quality Assurance',      to:'/quality-assurance/'},
-    {name:'Eco Green Environment',  to:'/eco-green-environment/'} ]
+  const data = navlinks()
+  const links = data.base ;
+  const about = data.about ;
   let social = [];
-  // [ {stype:"fa fa-instagram", to:"https://www.instagram.com/spino_paper"},
-  //   {stype:"fa fa-facebook", to:"https://www.facebook.com/spinopapers"},
-  //   {stype:"fa fa-youtube", to:"https://www.youtube.com/" } ];
-
   return (<header>
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
     <div className="container-fluid">

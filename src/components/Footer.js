@@ -1,33 +1,29 @@
 import React from 'react'
+import { Link } from "gatsby";
 import './../styles/footer.css'
+import { footerlinks } from './data'
 
 function links(data){
   return (<ul className="foot-link">
     {data.map((item, index)=>{return (
-      <li><a href={item.link}>{item.text}</a></li>
+      <li><Link to={item.to}>{item.name}</Link></li>
     )})}
   </ul>)
 }
 
 export default function Footer() {
-  const quickLinks = [
-    {link: "/products/", text: "Products"},
-    {link: "/eco-green-environment/", text: "Eco Green Environment"},
-    {link: "/quality-assurance/", text: "Quality Assurance"}, ]
-  const coInfo = [
-    {link: "/about-us/", text:"About Us"},
-    {link: "/gallery/", text:"Gallery"},
-    {link: "/contact-us/", text:"Contact us"},
-    {link: "/investor-relations/", text:"Investor Relations"}, ]
+  const data = footerlinks()
+  const quickLinks = data.quickLinks;
+  const coInfo = data.coInfo;
 
   return (<footer>
     <div className="middle_footer">
       <div className="container-fluid">
       <div className="row">
         <div className="col-lg-3">
-          <a className="footerlogo" href="/">
+          <Link className="footerlogo" to="/">
             <img src="/logo.png" alt="logo"/>
-          </a>
+          </Link>
           <div className="footer_text">
             Our company believes that quality standards of products &amp;
             services can be raised through teamwork,
