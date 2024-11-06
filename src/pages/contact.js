@@ -1,8 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import Banner from '../components/Banner'
+import {contact_details} from '../components/data'
 
 export default function Contact() {
+  const c = contact_details();
   return (<Layout>
     <Banner page='cntct'/>
     <div className="innerbody">
@@ -31,14 +33,17 @@ export default function Contact() {
               Kolkata, Howrah - 711411
             </p>
             <br/>
-            <p>
-                <span><i className="fa fa-phone" aria-hidden="true"></i></span>
-                <a href="tel:(+91)7890975602">(+91) 7890975602</a> <br/>
-                <span><i className="fa fa-phone" aria-hidden="true"></i></span>
-                <a href="tel:(+91)9674703249">(+91) 9674703249</a> <br/>
-                <span><i className="fa fa-envelope-o" aria-hidden="true"></i></span>
-                <a href="mailto:enquiry@spino.co.in">enquiry@spino.co.in</a>
-            </p>
+            <ul className='footer_contact'>
+                <li><span><i className={"fa "+c.phone.mark}
+                         aria-hidden="true"></i></span>
+                <a href={"tel:"+c.phone.t1}>{c.phone.t1}</a></li>
+                <li><span><i className={"fa "+c.phone.mark}
+                         aria-hidden="true"></i></span>
+                <a href={"tel:"+c.phone.t2}>{c.phone.t2}</a></li>
+                <li><span><i className={"fa "+c.email.mark}
+                         aria-hidden="true"></i></span>
+                <a href={"mailto:"+c.email.val}>{c.email.val}</a></li>
+            </ul>
             <br/>
         </div>
         <div className="col-sm-6 contact_right">

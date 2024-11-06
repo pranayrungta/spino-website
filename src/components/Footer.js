@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "gatsby";
 import './../styles/footer.css'
-import { footerlinks } from './data'
+import { footerlinks, contact_details } from './data'
 
 function links(data){
   return (<ul className="foot-link">
@@ -11,8 +11,32 @@ function links(data){
   </ul>)
 }
 
+function contact_section(){
+  const c = contact_details();
+  return (<ul className="footer_contact">
+    <li>
+      <span><i className={"fa "+c.addr1.mark}
+               aria-hidden="true"></i></span>
+      {c.addr1.val[0]}
+      {c.addr1.val.slice(1).map((line, i)=>
+        {return (<><br/>{line}</>)})}
+    </li>
+    <li>
+      <span><i className={"fa "+c.phone.mark}
+               aria-hidden="true"></i></span>
+      <a href={"tel:"+c.phone.t1}>{c.phone.t1}</a> <br/>
+      <a href={"tel:"+c.phone.t2}>{c.phone.t2}</a>
+    </li>
+    <li>
+      <span><i className={"fa "+c.email.mark}
+               aria-hidden="true"></i></span>
+      <a href={"mailto:"+c.email.val}>{c.email.val}</a>
+    </li>
+  </ul>)
+}
+
 export default function Footer() {
-  const data = footerlinks()
+  const data = footerlinks();
   return (<footer>
     <div className="middle_footer">
       <div className="container-fluid">
@@ -39,26 +63,7 @@ export default function Footer() {
           </div>
           <div className="col-sm-4 cuswidth">
             <h2>Contact Us</h2>
-            <ul className="footer_contact">
-              <li>
-                  <span><i className="fa fa-map-marker" aria-hidden="true"></i></span>
-                  Spinaroo Commercial Ltd.<br />
-                  Jalan Industrial Complex,<br />
-                  Main Gate - 1,<br />
-                  Right Lane - 3,<br />
-                  P.O- Begri, P.S. Domjur,<br />
-                  Howrah - 711411
-                </li>
-                <li>
-                  <span><i className="fa fa-phone" aria-hidden="true"></i></span>
-                  <a href="tel:(+91)7890975602">(+91) 7890975602</a> <br/>
-                  <a href="tel:(+91)9674703249">(+91) 9674703249</a>
-                </li>
-                <li>
-                  <span><i className="fa fa-envelope-o" aria-hidden="true"></i></span>
-                  <a href="mailto:enquiry@spino.co.in">enquiry@spino.co.in</a>
-                </li>
-            </ul>
+            {contact_section()}
           </div>
         </div> </div>
       </div> </div>

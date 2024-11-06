@@ -11,17 +11,12 @@ function dataRow(data){
     <div className="col-sm-4" key={index}>
     <div className="pro-con">
       <div className="prod-img">
-      <a href={item.slug}>
-        <img src={item.imgsrc} alt={item.name}/>
-      </a>
+        <a href={item.slug}> <img src={item.imgsrc} alt={item.name}/> </a>
       </div>
       <div className="pro-sec">
-      <h3>
-        <a href={item.slug}>{item.name}</a>
-      </h3>
+        <h3> <a href={item.slug}>{item.name}</a> </h3>
       </div>
-    </div>
-    </div>
+    </div> </div>
   )})}
   </div>)
 }
@@ -80,13 +75,7 @@ export default function NotFound() {
           {dataRow(data.machines)}
         </div>
       </div>
-    </div>
-    </div>
-    </section>
-    </div>
-    </div>
-    </div>
-    <div className="newsletter_area">
-    </div>
+    </div> </div> </section> </div> </div> </div>
+    <div className="newsletter_area"> </div>
   </Layout>)
 }
