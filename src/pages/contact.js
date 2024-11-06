@@ -4,7 +4,7 @@ import Banner from '../components/Banner'
 
 export default function Contact() {
   return (<Layout>
-    <Banner page='contact'/>
+    <Banner page='cntct'/>
     <div className="innerbody">
       <div className="contact-us">
       <div className="container">

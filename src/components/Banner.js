@@ -2,25 +2,23 @@ import React from 'react'
 import { Link } from 'gatsby';
 import { bannerdata } from './data';
 
-function breadcrumb(title, link, n=0){
+function breadcrumb(d, n=0){
   return [
-  <li key={n}><Link to={link} title={title}> {title} </Link></li>,
+  <li key={n}><Link to={d.to} title={d.name}> {d.name} </Link></li>,
   <li key={n+1}>/</li>]
 }
 
 export default function Banner({page, name=null}) {
-  let data = bannerdata(page);
-  if (page==='oneProd'){
-    data.name = name;}
+  const data = bannerdata(page, name);
 
-  let brcItems = breadcrumb('Home', '/', 0);
-  if (page==='oneProd')
-    brcItems.push( ...breadcrumb('Products', '/products/', 2));
-  brcItems.push(<li key={4}><strong>{data.name}</strong></li>);
+  let brcItems = breadcrumb(data.home, 0);
+  if (page==='onprd')
+    brcItems.push( ...breadcrumb(data.prod, 2));
+  brcItems.push(<li key={4}><strong>{data.curr.name}</strong></li>);
 
   return (<div>
     <div className="innerBanner">
-      <img src={"/banner/"+data.img} alt={data.name}
+      <img src={"/banner/"+data.curr.img} alt={data.curr.name}
            className="img-responsive" />
     </div>
     <div className="breadcrumb_area">
@@ -34,7 +32,7 @@ export default function Banner({page, name=null}) {
       </div>
       <div className="col-sm-6">
         <div className="breadcrumb_top">
-          <h1>{data.name}</h1>
+          <h1>{data.curr.name}</h1>
         </div>
       </div>
     </div> </div> </div>

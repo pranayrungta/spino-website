@@ -12,7 +12,7 @@ export default function Gallery() {
     '0U5A2716.JPG', '0U5A2771.JPG', 'IMG-20240910-WA0017.jpg',
     'printed-reel.jpg', '0U5A2722.JPG', '0U5A2780.JPG']
   return (<Layout>
-    <Banner page='gallery'/>
+    <Banner page='glry'/>
     <div className="innerbody">
       <div className="container">
         <div className="white_bg">

@@ -4,7 +4,7 @@ import Banner from '../components/Banner'
 
 export default function EcoGreenEnv() {
   return (<Layout>
-    <Banner page='invest'/>
+    <Banner page='invst'/>
     <div className="innerbody">
     <div className="container">
           <div className="contact-form">

@@ -4,7 +4,7 @@ import Banner from '../components/Banner'
 
 export default function About_us() {
   return (<Layout>
-    <Banner page='about'/>
+    <Banner page='abtft'/>
     <div className="home_about inner-about">
       <div className="container">
         <div className="row align-items-center">

@@ -47,7 +47,7 @@ export default function NotFound() {
     {slug: "/machines/paper-cup-machine/"           , imgsrc : "/machines/m-1.png"  , name : "Paper Cup Machine"           },
   ]};
   return (<Layout>
-    <Banner page='product'/>
+    <Banner page='prod'/>
     <div className="innerbody featured_products">
     <div className="container">
     <div className="white_bg">

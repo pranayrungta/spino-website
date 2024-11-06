@@ -145,7 +145,7 @@ export function prodpage(slug){
   const curprod = alldata.prod;
 
   return (<Layout>
-    <Banner page='oneProd' name={curprod.name}/>
+    <Banner page='onprd' name={curprod.name}/>
     <div className="innerbody product_details">
     <div className="container">
     <div className="row">

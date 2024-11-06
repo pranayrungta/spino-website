@@ -4,7 +4,7 @@ import Banner from '../components/Banner'
 
 export default function QualityAssurance() {
   return (<Layout>
-    <Banner page='qa'/>
+    <Banner page='qlas'/>
     <div className="home_about inner-about">
       <div className="container">
       <div className="row align-items-center">

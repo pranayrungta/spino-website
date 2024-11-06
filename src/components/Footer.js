@@ -13,9 +13,6 @@ function links(data){
 
 export default function Footer() {
   const data = footerlinks()
-  const quickLinks = data.quickLinks;
-  const coInfo = data.coInfo;
-
   return (<footer>
     <div className="middle_footer">
       <div className="container-fluid">
@@ -34,11 +31,11 @@ export default function Footer() {
         <div className="row">
           <div className="col-sm-4 cuswidth">
             <h2>Quick Links</h2>
-            {links(quickLinks)}
+            {links(data.quickLinks)}
           </div>
           <div className="col-sm-4 cuswidth">
             <h2>Company Info</h2>
-            {links(coInfo)}
+            {links(data.coInfo)}
           </div>
           <div className="col-sm-4 cuswidth">
             <h2>Contact Us</h2>

@@ -23,9 +23,6 @@ const data = {
   home: { name: "Home", to: "/", img: null },
   glry: { name: "Gallery", to: "/gallery/", img: "pexels-photo-145685.jpg" },
   prod:  { name: "Products", to: "/products/", img: "pexels-photo-1108572.jpg" },
-  // name assigned by each product in product details page
-  onprd: { name: null,       to: "#",          img: "pexels-photo-1108572.jpg" },
-
   abtnv: {name: "About us",  to: "#",          img: "pexels-photo-247599.jpg"}, // nav dropdown
   abtus: {name: "Our Story", to: "/about-us/", img: "pexels-photo-247599.jpg"}, // nav
   abtft: {name: "About us",  to: "/about-us/", img: "pexels-photo-247599.jpg"}, // footer
@@ -46,18 +43,11 @@ export function footerlinks(){
   }
 }
 
-export function bannerdata(page){
-  const data_map = { // data.to is not used by caller
-    oneProd : data.onprd,
-    about   : data.abtft,
-    green   : data.green,
-    gallery : data.glry,
-    invest  : data.invst,
-    product : data.prod,
-    qa      : data.qlas,
-    contact : data.cntct,
-  };
-  return data_map[page];
+export function bannerdata(page, name){
+  let d = {home: data.home, prod: data.prod, curr: data[page]};
+  if (page==='onprd'){
+    d.curr = {name: name, img: data.abtft.img};}
+  return d;
 }
 
 export function social(){
