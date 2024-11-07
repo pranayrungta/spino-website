@@ -1,22 +1,7 @@
 import React from "react"
 import Layout from "../components/Layout"
-import { table, get_data, featured } from "./prod-data";
 import Banner from "../components/Banner";
-
-function machines_data(){
-  return {
-    "coating-machine"              : {imgsrc : "/machines/m-5.jpg"  ,
-                                      name : "Coating machine"             },
-    "slitting-machine"             : {imgsrc : "/machines/m-4.jpg"  ,
-                                      name : "Slitting machine"            },
-    "flexo-paper-printing-machine" : {imgsrc : "/machines/m-3.jpg"  ,
-                                      name : "Flexo Paper Printing Machine"},
-    "die-cutting-machine"          : {imgsrc : "/machines/m-2.png"  ,
-                                      name : "Die cutting Machine"         },
-    "paper-cup-machine"            : {imgsrc : "/machines/m-1.png"  ,
-                                      name : "Paper Cup Machine"           },
-  }
-}
+import {table, get_data, featured} from "./prod-data";
 
 function coating_machine(){
   const df = [['Capacity', '120 metre per min(Production)'],
@@ -257,7 +242,7 @@ function machine_details(slug){
 }
 
 export default function Machines({pageContext}) {
-  const alldata = get_data(machines_data(), pageContext.slug)
+  const alldata = get_data('machines', pageContext.slug)
   const curprod = alldata.prod;
 
   return (<Layout>

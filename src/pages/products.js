@@ -11,35 +11,35 @@ function dataRow(data){
     <div className="col-sm-4" key={index}>
     <div className="pro-con">
       <div className="prod-img">
-        <a href={item.slug}> <img src={item.imgsrc} alt={item.name}/> </a>
+        <a href={item.to}> <img src={item.imgsrc} alt={item.name}/> </a>
       </div>
       <div className="pro-sec">
-        <h3> <a href={item.slug}>{item.name}</a> </h3>
+        <h3> <a href={item.to}>{item.name}</a> </h3>
       </div>
     </div> </div>
   )})}
   </div>)
 }
 
-export default function NotFound() {
+export default function Products() {
   let data = {products: [
-    {slug: "/products/paper-straw"             , imgsrc : "/products/paper.jpg"         , name : "Paper Straw"              },
-    {slug: "/products/bobbin"                  , imgsrc : "/products/Bobbin.png"        , name : "Bobbin"                   },
-    {slug: "/products/paper-cup-blanks"        , imgsrc : "/products/Blanks.jpg"        , name : "Paper Cup Blanks"         },
-    {slug: "/products/paper-tissue"            , imgsrc : "/products/Tissue.png"        , name : "Paper Tissue"             },
-    {slug: "/products/laminated-lid"           , imgsrc : "/products/Lids.png"          , name : "Laminated LID"            },
-    {slug: "/products/coated-paper"            , imgsrc : "/products/Coated-Paper-2.png", name : "Coated Paper"             },
-    {slug: "/products/paper-cups"              , imgsrc : "/products/1.png"             , name : "Paper Cups"               },
-    {slug: "/products/paper-plate-blanks"      , imgsrc : "/products/9.png"             , name : "Paper Plate Blanks"       },
-    {slug: "/products/aluminium-foil-container", imgsrc : "/products/2.png"             , name : "Aluminium Foil Container" },
-    {slug: "/products/aluminium-home-foil"     , imgsrc : "/products/Home-Foil.png"     , name : "Aluminium Home Foil"      },
+    {to: "/products/paper-straw"             , imgsrc : "/products/paper.jpg"         , name : "Paper Straw"              },
+    {to: "/products/bobbin"                  , imgsrc : "/products/Bobbin.png"        , name : "Bobbin"                   },
+    {to: "/products/paper-cup-blanks"        , imgsrc : "/products/Blanks.jpg"        , name : "Paper Cup Blanks"         },
+    {to: "/products/paper-tissue"            , imgsrc : "/products/Tissue.png"        , name : "Paper Tissue"             },
+    {to: "/products/laminated-lid"           , imgsrc : "/products/Lids.png"          , name : "Laminated LID"            },
+    {to: "/products/coated-paper"            , imgsrc : "/products/Coated-Paper-2.png", name : "Coated Paper"             },
+    {to: "/products/paper-cups"              , imgsrc : "/products/1.png"             , name : "Paper Cups"               },
+    {to: "/products/paper-plate-blanks"      , imgsrc : "/products/9.png"             , name : "Paper Plate Blanks"       },
+    {to: "/products/aluminium-foil-container", imgsrc : "/products/2.png"             , name : "Aluminium Foil Container" },
+    {to: "/products/aluminium-home-foil"     , imgsrc : "/products/Home-Foil.png"     , name : "Aluminium Home Foil"      },
   ],
   machines : [
-    {slug: "/machines/coating-machine/"             , imgsrc : "/machines/m-5.jpg"  , name : "Coating machine"             },
-    {slug: "/machines/slitting-machine/"            , imgsrc : "/machines/m-4.jpg"  , name : "Slitting machine"            },
-    {slug: "/machines/flexo-paper-printing-machine/", imgsrc : "/machines/m-3.jpg"  , name : "Flexo Paper Printing Machine"},
-    {slug: "/machines/die-cutting-machine/"         , imgsrc : "/machines/m-2.png"  , name : "Die cutting Machine"         },
-    {slug: "/machines/paper-cup-machine/"           , imgsrc : "/machines/m-1.png"  , name : "Paper Cup Machine"           },
+    {to: "/machines/coating-machine/"             , imgsrc : "/machines/m-5.jpg"  , name : "Coating machine"             },
+    {to: "/machines/slitting-machine/"            , imgsrc : "/machines/m-4.jpg"  , name : "Slitting machine"            },
+    {to: "/machines/flexo-paper-printing-machine/", imgsrc : "/machines/m-3.jpg"  , name : "Flexo Paper Printing Machine"},
+    {to: "/machines/die-cutting-machine/"         , imgsrc : "/machines/m-2.png"  , name : "Die cutting Machine"         },
+    {to: "/machines/paper-cup-machine/"           , imgsrc : "/machines/m-1.png"  , name : "Paper Cup Machine"           },
   ]};
   return (<Layout>
     <Banner page='prod'/>

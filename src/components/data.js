@@ -46,7 +46,7 @@ export function footerlinks(){
 export function bannerdata(page, name){
   let d = {home: data.home, prod: data.prod, curr: data[page]};
   if (page==='onprd'){
-    d.curr = {name: name, img: data.abtft.img};}
+    d.curr = {name: name, img: data.prod.img};}
   return d;
 }
 
