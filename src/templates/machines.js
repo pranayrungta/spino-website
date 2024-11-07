@@ -260,7 +260,7 @@ export default function Machines({pageContext}) {
     </div>
     </div>
     </div>
-    {featured(alldata.fp, true)}
+    {featured(alldata.fp)}
     <div className="newsletter_area"></div>
   </Layout>)
 }

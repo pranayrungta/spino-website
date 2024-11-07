@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import {productData} from './../components/data'
 
 export function ProductCarousel() {
@@ -26,6 +27,15 @@ export function ProductCarousel() {
 }
 
 export function get_data(fp, slug){
+  let prod = productData[fp][slug];
+  let otherprods = {...productData[fp]};
+  delete otherprods[slug]
+  otherprods = Object.entries(otherprods).map(
+    ([slug, value]) => ({to:`/${fp}/${slug}`, ...value }));
+  return {prod: prod, fp:otherprods};
+}
+
+export function get_data_backup(fp, slug){
   fp = productData[fp];
   let prod = fp[slug];
   let alldata = {...fp};
@@ -49,11 +59,7 @@ export function table(df){
   </div>)
 }
 
-export function featured(fp, machines=false){
-  let route = '';
-  if (machines){ route = 'machines'; }
-  else { route = 'products';}
-
+export function featured(fp){
   return (<div className="featured_products related_product">
   <div className="container">
     <h2><span>Related</span> Products</h2>
@@ -63,14 +69,10 @@ export function featured(fp, machines=false){
       <div key={index} className="col-4">    {/* col-4 added later */}
       <div className="pro-con">
         <div className="prod-img">
-          <a href={`/${route}/${p.slug}`}>
-          <img src={p.imgsrc} alt="" />
-          </a>
+          <Link to={p.to}> <img src={p.imgsrc} alt="" /> </Link>
         </div>
         <div className="pro-sec">
-          <h3><a href={`/${route}/${p.slug}`}>
-            {p.name}
-          </a></h3>
+          <h3><Link to={p.to}> {p.name} </Link></h3>
         </div>
       </div> </div>
     )})}
