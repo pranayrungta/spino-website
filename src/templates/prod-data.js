@@ -1,12 +1,6 @@
 import React from "react"
 
-const data = {machines : {
-  "coating-machine"              : {imgsrc : "/machines/m-5.jpg", name : "Coating machine"             },
-  "slitting-machine"             : {imgsrc : "/machines/m-4.jpg", name : "Slitting machine"            },
-  "flexo-paper-printing-machine" : {imgsrc : "/machines/m-3.jpg", name : "Flexo Paper Printing Machine"},
-  "die-cutting-machine"          : {imgsrc : "/machines/m-2.png", name : "Die cutting Machine"         },
-  "paper-cup-machine"            : {imgsrc : "/machines/m-1.png", name : "Paper Cup Machine"           },
-  },
+export const data = {
   products : {
   "paper-plate-blanks"       : {imgsrc : "/products/9.png",              name : "Paper Plate Blanks"      },
   "aluminium-foil-container" : {imgsrc : "/products/2.png",              name : "Aluminium Foil Container"},
@@ -18,7 +12,14 @@ const data = {machines : {
   "coated-paper"             : {imgsrc : "/products/Coated-Paper-2.png", name : "Coated Paper"            },
   "aluminium-home-foil"      : {imgsrc : "/products/Home-Foil.png",      name : "Aluminium Home Foil"     },
   "paper-tissue"             : {imgsrc : "/products/Tissue.png",         name : "Paper Tissue"            },
-  }
+  },
+  machines : {
+  "coating-machine"              : {imgsrc : "/machines/m-5.jpg", name : "Coating machine"             },
+  "slitting-machine"             : {imgsrc : "/machines/m-4.jpg", name : "Slitting machine"            },
+  "flexo-paper-printing-machine" : {imgsrc : "/machines/m-3.jpg", name : "Flexo Paper Printing Machine"},
+  "die-cutting-machine"          : {imgsrc : "/machines/m-2.png", name : "Die cutting Machine"         },
+  "paper-cup-machine"            : {imgsrc : "/machines/m-1.png", name : "Paper Cup Machine"           },
+  },
 }
 
 export function get_data(fp, slug){
