@@ -76,12 +76,7 @@ export function contact_details(){
   return {
     phone:{mark: 'fa-phone', t1: '(+91) 7890975602', t2: '(+91)9674703249'},
     email:{mark: 'fa-envelope-o', val: 'enquiry@spino.co.in'},
-    addr1:{mark: 'fa-map-marker', val:['Spinaroo Commercial Ltd.',
-                                       'Jalan Industrial Complex,',
-                                       'Main Gate - 1,',
-                                       'Right Lane - 3,',
-                                       'P.O- Begri, P.S. Domjur,',
-                                       'Howrah - 711411',]}
+    addr1:{mark: 'fa-map-marker',}
   }
 }
 

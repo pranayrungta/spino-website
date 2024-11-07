@@ -6,7 +6,7 @@ import { footerlinks, contact_details } from './data'
 function links(data){
   return (<ul className="foot-link">
     {data.map((item, index)=>{return (
-      <li><Link to={item.to}>{item.name}</Link></li>
+      <li key={index}><Link to={item.to}>{item.name}</Link></li>
     )})}
   </ul>)
 }
@@ -17,9 +17,12 @@ function contact_section(){
     <li>
       <span><i className={"fa "+c.addr1.mark}
                aria-hidden="true"></i></span>
-      {c.addr1.val[0]}
-      {c.addr1.val.slice(1).map((line, i)=>
-        {return (<><br/>{line}</>)})}
+      Spinaroo Commercial Ltd. <br/>
+      Jalan Industrial Complex, <br/>
+      Main Gate - 1, <br/>
+      Right Lane - 3, <br/>
+      P.O- Begri, P.S. Domjur, <br/>
+      Howrah - 711411
     </li>
     <li>
       <span><i className={"fa "+c.phone.mark}
