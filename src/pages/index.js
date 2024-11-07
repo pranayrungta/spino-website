@@ -1,7 +1,7 @@
 import * as React from "react"
 import Layout from "../components/Layout"
 import "./../styles/homebanner.css"
-import {data} from './../templates/prod-data'
+import {ProductCarousel} from './../templates/prod-data'
 
 function HomeBanner() {
   let files = ['Paper-Cup-1.png', 'Paper-Plate.png', 'Coated-Paper-1.png',
@@ -82,29 +82,6 @@ function Story() {
     )
 }
 
-function ProductCarousel() {
-  const prods =  data.products
-  return (<div className="featured_products">
-    <div className="container">
-      <h2><span>Our</span> Products</h2>
-      <div className="pro-row">
-      <div className="productslide row">  {/*className='row' added later*/}
-        {Object.keys(prods).slice(0, 9).map((slug, i)=>{ return (
-          <div key={i} className='col-4'>  {/*className='col-4' added later*/}
-          <div className="pro-con">
-            <div className="prod-img">
-              <a href={'/products/'+slug}>
-                <img src={prods[slug].imgsrc} alt={prods[slug].name}/>
-              </a>
-            </div>
-            <div className="pro-sec">
-              <h3><a href={'/products/'+slug}>{prods[slug].name}</a></h3>
-            </div>
-          </div></div>
-        )})}
-      </div> </div>
-    </div></div>)
-}
 
 export default function Home() {
   return (<Layout>

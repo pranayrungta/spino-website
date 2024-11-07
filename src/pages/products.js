@@ -1,14 +1,11 @@
 import React from 'react'
 import Layout from "../components/Layout"
-import "bootstrap/dist/js/bootstrap.min.js";
-import "jquery/dist/jquery.slim.min.js"
-import "bootstrap/dist/css/bootstrap.min.css";
 import Banner from '../components/Banner';
-import { data } from '../templates/prod-data';
+import {productData} from './../components/data'
 import { Link } from 'gatsby';
 
 function dataRow(key){
-  const items = data[key];
+  const items = productData[key];
   return (<div className="row">
   {Object.keys(items).map((slug, index)=> {return (
     <div className="col-sm-4" key={index}>

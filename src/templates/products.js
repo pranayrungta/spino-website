@@ -5,30 +5,40 @@ import {table, get_data, featured} from './prod-data'
 
 function tab_only(slug, name){
   let d = {
-    "paper-plate-blanks"       : [['Size', 'As per Requirement'],
-              ['Bag Packing', '30 Kg']],
-    "aluminium-foil-container" : [['Size', '120 ml', '230 ml', '250 ml', '450 ml', '660 ml', '750 ml'],
-              ['Packing(Pcs)', '100', '100', '100', '100', '100', '100'],
-              ['Box Packing (Pcs)', '3750', '1650', '1750', '1750', '1750', '1750'],
-              ['Thickness(Micron)', '34', '34', '34', '35', '38', '38']],
-    "bobbin"                   : [['Size', 'As per Requirement'],
-              ['Packing (in Kgs)', 'As per Requirement']],
-    "laminated-lid"            : [['Size', '120 ml', '150 ml', '200 ml', '230 ml', '250 ml', '450 ml', '660 ml', '750 ml'],
-              ['Packing (Pcs)', '100', '100', '100', '100', '100', '100', '100', '100'],
-              ['Box Packing (Pcs)', 'As per Container Quantity', 'As per Container Quantity', 'As per Container Quantity', 'As per Container Quantity', 'As per Container Quantity', 'As per Container Quantity', 'As per Container Quantity', 'As per Container Quantity']],
-    "paper-cups"               : [['Size', '40 ml', '50 ml', '60 ml', '80 ml', '100 ml', '150 ml', '210 ml', '250 ml'],
-              ['Packing(Pcs)', '100', '100', '100', '100', '100', '100', '100', '100'],
-              ['Box Packing(Pcs)', '7800', '6600', '6600', '5500', '4500', '2500', '2500', '2500'],
-              ['Thickness(GSM)', '152-162', '152-162', '152-162', '152-162', '152-162', '152-162', '152-162', '152-162']],
-    "paper-straw"              : [['Size', '6 mm', '8 mm', '10 mm'],
-              ['Packing (Pcs)', '50', '50', '50'],
-              ['Box Packing (Pcs)', '5000', '5000', '5000']],
-    "aluminium-home-foil"      : [['Size', '9 Mtrs', '72 Mtrs', '72 No.', '75 No.'],
-              ['Micron', '10.5 Micron', '10.5 Micron', '10.5 Micron', '10.5 Micron'],
-              ['Box Packing (Pcs)', '100', '25', '25', '25']],
-    "paper-tissue"             : [['Size', '20 X 20', '24 X 24', '30 X 30', '33 X 33'],
-              ['Packing (Pcs)', '50', '50', '50', '50'],
-              ['Box Packing (Pcs)', '500', '500', '500', '500']]
+    "paper-plate-blanks"       :
+       [['Size', 'As per Requirement'],
+        ['Bag Packing', '30 Kg']],
+    "aluminium-foil-container" :
+       [['Size', '120 ml', '230 ml', '250 ml', '450 ml', '660 ml', '750 ml'],
+        ['Packing(Pcs)', '100', '100', '100', '100', '100', '100'],
+        ['Box Packing (Pcs)', '3750', '1650', '1750', '1750', '1750', '1750'],
+        ['Thickness(Micron)', '34', '34', '34', '35', '38', '38']],
+    "bobbin"                   :
+       [['Size', 'As per Requirement'],
+        ['Packing (in Kgs)', 'As per Requirement']],
+    "laminated-lid"            :
+       [['Size', '120 ml', '150 ml', '200 ml', '230 ml', '250 ml', '450 ml', '660 ml', '750 ml'],
+        ['Packing (Pcs)', '100', '100', '100', '100', '100', '100', '100', '100'],
+        ['Box Packing (Pcs)', 'As per Container Quantity', 'As per Container Quantity',
+         'As per Container Quantity', 'As per Container Quantity', 'As per Container Quantity',
+         'As per Container Quantity', 'As per Container Quantity', 'As per Container Quantity']],
+    "paper-cups"               :
+       [['Size', '40 ml', '50 ml', '60 ml', '80 ml', '100 ml', '150 ml', '210 ml', '250 ml'],
+        ['Packing(Pcs)', '100', '100', '100', '100', '100', '100', '100', '100'],
+        ['Box Packing(Pcs)', '7800', '6600', '6600', '5500', '4500', '2500', '2500', '2500'],
+        ['Thickness(GSM)', '152-162', '152-162', '152-162', '152-162', '152-162', '152-162', '152-162', '152-162']],
+    "paper-straw"              :
+       [['Size', '6 mm', '8 mm', '10 mm'],
+        ['Packing (Pcs)', '50', '50', '50'],
+        ['Box Packing (Pcs)', '5000', '5000', '5000']],
+    "aluminium-home-foil"      :
+       [['Size', '9 Mtrs', '72 Mtrs', '72 No.', '75 No.'],
+        ['Micron', '10.5 Micron', '10.5 Micron', '10.5 Micron', '10.5 Micron'],
+        ['Box Packing (Pcs)', '100', '25', '25', '25']],
+    "paper-tissue"             :
+       [['Size', '20 X 20', '24 X 24', '30 X 30', '33 X 33'],
+        ['Packing (Pcs)', '50', '50', '50', '50'],
+        ['Box Packing (Pcs)', '500', '500', '500', '500']]
   }
   return (<div className="col-sm-8">
     <h2>{name}</h2>

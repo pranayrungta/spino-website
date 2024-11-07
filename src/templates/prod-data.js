@@ -1,29 +1,32 @@
 import React from "react"
+import {productData} from './../components/data'
 
-export const data = {
-  products : {
-  "paper-plate-blanks"       : {imgsrc : "/products/9.png",              name : "Paper Plate Blanks"      },
-  "aluminium-foil-container" : {imgsrc : "/products/2.png",              name : "Aluminium Foil Container"},
-  "bobbin"                   : {imgsrc : "/products/Bobbin.png",         name : "Bobbin"                  },
-  "laminated-lid"            : {imgsrc : "/products/Lids.png",           name : "Laminated LID"           },
-  "paper-cups"               : {imgsrc : "/products/1.png",              name : "Paper Cups"              },
-  "paper-cup-blanks"         : {imgsrc : "/products/Blanks.jpg",         name : "Paper Cup Blanks"        },
-  "paper-straw"              : {imgsrc : "/products/paper.jpg",          name : "Paper Straw"             },
-  "coated-paper"             : {imgsrc : "/products/Coated-Paper-2.png", name : "Coated Paper"            },
-  "aluminium-home-foil"      : {imgsrc : "/products/Home-Foil.png",      name : "Aluminium Home Foil"     },
-  "paper-tissue"             : {imgsrc : "/products/Tissue.png",         name : "Paper Tissue"            },
-  },
-  machines : {
-  "coating-machine"              : {imgsrc : "/machines/m-5.jpg", name : "Coating machine"             },
-  "slitting-machine"             : {imgsrc : "/machines/m-4.jpg", name : "Slitting machine"            },
-  "flexo-paper-printing-machine" : {imgsrc : "/machines/m-3.jpg", name : "Flexo Paper Printing Machine"},
-  "die-cutting-machine"          : {imgsrc : "/machines/m-2.png", name : "Die cutting Machine"         },
-  "paper-cup-machine"            : {imgsrc : "/machines/m-1.png", name : "Paper Cup Machine"           },
-  },
+export function ProductCarousel() {
+  const prods =  productData.products
+  return (<div className="featured_products">
+    <div className="container">
+      <h2><span>Our</span> Products</h2>
+      <div className="pro-row">
+      <div className="productslide row">  {/*className='row' added later*/}
+        {Object.keys(prods).slice(0, 9).map((slug, i)=>{ return (
+          <div key={i} className='col-4'>  {/*className='col-4' added later*/}
+          <div className="pro-con">
+            <div className="prod-img">
+              <a href={'/products/'+slug}>
+                <img src={prods[slug].imgsrc} alt={prods[slug].name}/>
+              </a>
+            </div>
+            <div className="pro-sec">
+              <h3><a href={'/products/'+slug}>{prods[slug].name}</a></h3>
+            </div>
+          </div></div>
+        )})}
+      </div> </div>
+    </div></div>)
 }
 
 export function get_data(fp, slug){
-  fp = data[fp];
+  fp = productData[fp];
   let prod = fp[slug];
   let alldata = {...fp};
   delete alldata[slug]

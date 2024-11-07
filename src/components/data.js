@@ -28,6 +28,28 @@ const data = {
   abtft: {name: "About us",  to: "/about-us/", img: "pexels-photo-247599.jpg"}, // footer
 };
 
+export const productData = {
+  products : {
+  "paper-plate-blanks"       : {imgsrc : "/products/9.png",              name : "Paper Plate Blanks"      },
+  "aluminium-foil-container" : {imgsrc : "/products/2.png",              name : "Aluminium Foil Container"},
+  "bobbin"                   : {imgsrc : "/products/Bobbin.png",         name : "Bobbin"                  },
+  "laminated-lid"            : {imgsrc : "/products/Lids.png",           name : "Laminated LID"           },
+  "paper-cups"               : {imgsrc : "/products/1.png",              name : "Paper Cups"              },
+  "paper-cup-blanks"         : {imgsrc : "/products/Blanks.jpg",         name : "Paper Cup Blanks"        },
+  "paper-straw"              : {imgsrc : "/products/paper.jpg",          name : "Paper Straw"             },
+  "coated-paper"             : {imgsrc : "/products/Coated-Paper-2.png", name : "Coated Paper"            },
+  "aluminium-home-foil"      : {imgsrc : "/products/Home-Foil.png",      name : "Aluminium Home Foil"     },
+  "paper-tissue"             : {imgsrc : "/products/Tissue.png",         name : "Paper Tissue"            },
+  },
+  machines : {
+  "coating-machine"              : {imgsrc : "/machines/m-5.jpg", name : "Coating machine"             },
+  "slitting-machine"             : {imgsrc : "/machines/m-4.jpg", name : "Slitting machine"            },
+  "flexo-paper-printing-machine" : {imgsrc : "/machines/m-3.jpg", name : "Flexo Paper Printing Machine"},
+  "die-cutting-machine"          : {imgsrc : "/machines/m-2.png", name : "Die cutting Machine"         },
+  "paper-cup-machine"            : {imgsrc : "/machines/m-1.png", name : "Paper Cup Machine"           },
+  },
+}
+
 export function navlinks(){
   return {
     base : [data.home, data.abtnv, data.prod,
