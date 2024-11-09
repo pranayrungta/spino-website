@@ -1,6 +1,31 @@
 import React from 'react'
 import Layout from "../components/Layout"
 import Banner from '../components/Banner'
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+
+function OneImage({file}) {
+  const [modalShow, setModalShow] = React.useState(false);
+  return (<>
+    <div className="col-sm-4">
+    <div className="gallery-img">
+      <Button rel="ligthbox" variant='light'
+        onClick={() => setModalShow(true)} >
+        <img src={file} alt={file}/>
+      </Button>
+    </div>
+    </div>
+
+    <Modal show={modalShow} onHide={() => setModalShow(false)}
+      size="lg" aria-labelledby="contained-modal-title-vcenter"
+          centered>
+      <Modal.Body>
+        <img src={file} alt={file}/>
+      </Modal.Body>
+    </Modal>
+  </>);
+}
+
 
 export default function Gallery() {
   const files = ['0U5A2695.JPG', '0U5A2747.JPG', '0U5A2794.JPG',
@@ -15,20 +40,13 @@ export default function Gallery() {
     <Banner page='glry'/>
     <div className="innerbody">
       <div className="container">
-        <div className="white_bg">
-          <div className="row" id="allimages">
-            {files.map((file, index)=>{return (
-              <div className="col-sm-4" key={index}>
-              <div className="gallery-img">
-                <a className="fancybox" rel="ligthbox"
-                   href={"/gallery/"+file} title="Image" >
-                  <img src={"/gallery/"+file} alt={file}
-                       className="img-thumbnail img-responsive" />
-                </a>
-              </div>
-            </div>)})}
-          </div>
-        </div>
+      <div className="white_bg">
+      <div className="row" id="allimages">
+        {files.map((file, i)=>
+          <OneImage file={file} key={i}/>)
+        }
+      </div>
+      </div>
       </div>
     </div>
     <div className="newsletter_area"> </div>
