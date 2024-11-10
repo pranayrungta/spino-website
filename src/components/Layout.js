@@ -3,12 +3,12 @@ import "font-awesome/css/font-awesome.css"
 import './../styles/global.css'
 import "./../styles/responsive.css"
 import "./../styles/style.css"
-import Navbar from './Navbar'
+import NavbarSpino from './Navbar'
 import Footer from './Footer'
 
 export default function Layout({children}) {
   return (<div id='fullpage'>
-    <Navbar/>
+    <NavbarSpino/>
     <div id='content'>
         {children}
     </div>
