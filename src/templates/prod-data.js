@@ -2,6 +2,45 @@ import React from "react"
 import { Link } from "gatsby"
 import {productData} from './../components/data'
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+export function ResponsiveSlider() {
+  const prods =  productData.products;
+  var settings = {
+    dots: true, infinite: false, speed: 500,
+    slidesToShow: 4, slidesToScroll: 4, initialSlide: 0,
+    responsive: [
+      {breakpoint: 1024, settings: { slidesToShow: 3, slidesToScroll: 3, infinite: true, dots: true } },
+      {breakpoint: 600, settings: { slidesToShow: 2, slidesToScroll: 2, initialSlide: 2 } },
+      {breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } }
+    ] };
+  return (<div className="slickprod featured_products">
+    <div className="slider-container container">
+      <h2><span>Our</span> Products</h2>
+      <div className="pro-row productslide">
+      <Slider {...settings}>
+        {Object.keys(prods).map((slug,i)=> {return (
+          <div key={i}>
+          <div className="pro-con">
+            <div className="prod-img">
+              <a href={'/products/'+slug}>
+                <img src={prods[slug].imgsrc} alt={prods[slug].name}/>
+              </a>
+            </div>
+            <div className="pro-sec">
+              <h5><a href={'/products/'+slug}>{prods[slug].name}</a></h5>
+            </div>
+          </div></div>
+        )})}
+      </Slider>
+      </div>
+    </div>
+  </div>);
+}
+
+
 export function ProductCarousel() {
   const prods =  productData.products
   return (<div className="featured_products">

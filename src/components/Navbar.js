@@ -6,8 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { navlinks } from "./data";
 
-function Social(data){
-  if (data.length ==0) return <></>
+function social(data){
+  if (data.length===0) return <></>
   return (
     <div className="ml-auto row align-items-center">
       <ul className="social-top">
@@ -41,7 +41,7 @@ export default function NavbarSpino() {
         {links.slice(2).map((d,i)=>{return (
           <Nav.Link href={d.to} key={i}>{d.name}</Nav.Link>
         )})}
-        {/* Social(data.social) */}
+        {/* social(data.social) */}
       </Nav>
       </Navbar.Collapse>
     </Container>
