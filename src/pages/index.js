@@ -69,7 +69,6 @@ export default function Home() {
   return (<Layout>
     <HomeBanner/>
     <Story/>
-    <ProductCarousel/>
     <ResponsiveSlider/>
     <div className="newsletter_area">
     </div>

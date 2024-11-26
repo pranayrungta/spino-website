@@ -32,7 +32,7 @@ export default function NavbarSpino() {
       <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="me-auto">
         <Nav.Link href={links[0].to}>{links[0].name}</Nav.Link>
-        <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+        <NavDropdown title={links[1].name} id="basic-nav-dropdown">
           {about.map((d, index)=>{return (
           <NavDropdown.Item key={index} href={d.to}>
             {d.name}

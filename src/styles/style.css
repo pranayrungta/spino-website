@@ -349,7 +349,7 @@ header .social-top li a {
 
 .featured_products .slick-next:before {
   content: "";
-  background: url(/wp-content/themes/spinaroo/images/arrow-R.png) no-repeat left;
+  background: url(/banner/right.png) no-repeat left;
   width: 33px;
   height: 20px;
   position: absolute;
@@ -357,7 +357,7 @@ header .social-top li a {
 
 .featured_products .slick-prev:before {
   content: "";
-  background: url(/wp-content/themes/spinaroo/images/arrow-L.png) no-repeat left;
+  background: url(/banner/left.png) no-repeat left;
   width: 33px;
   height: 20px;
   position: absolute;
